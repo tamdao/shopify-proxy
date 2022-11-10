@@ -18,6 +18,7 @@ module.exports = function shopifyProxy(proxyOptions) {
           process.env.STOREFRONT_ACCESS_TOKEN,
       },
       proxyReqOptDecorator(proxyReqOpts) {
+        // Don't remove this line, look like the proxy auto add `content-type: application/json` so we need to delete it because shopify use `application/graphql`
         delete proxyReqOpts.headers['content-type']
         return proxyReqOpts
       },
