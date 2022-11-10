@@ -1,6 +1,5 @@
 require('dotenv').config()
-const http = require('http')
-const https = require('https')
+
 const Koa = require('koa')
 const cors = require('@koa/cors')
 const shopifyProxy = require('./shopify-proxy')
